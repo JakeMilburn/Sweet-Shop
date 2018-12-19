@@ -1,0 +1,111 @@
+.btn {
+  padding-top: 0.155rem;
+  padding-bottom: 0.155rem; }
+
+.content-wrapper {
+  padding: 2% 30%; }
+  @media only screen and (max-width: 850px) {
+    .content-wrapper {
+      padding: 2% 12%; } }
+  .content-wrapper div {
+    font-size: 20px; }
+    @media only screen and (max-width: 850px) {
+      .content-wrapper div {
+        font-size: 15px; } }
+
+.navbar {
+  background-image: url(img/banner.jpg);
+  height: 300px;
+  position: initial; }
+  .navbar .navbar-brand {
+    font-size: 40px; }
+  .navbar .nav-link {
+    font-size: 25px;
+    color: white !important; }
+
+.wrapper {
+  margin: -100px 50px 0 50px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+  z-index: 3;
+  background-color: white;
+  min-height: 500px; }
+  .wrapper .sweet-wrapper {
+    width: 60%;
+    padding: 5%;
+    display: inline-block; }
+    @media only screen and (max-width: 1650px) {
+      .wrapper .sweet-wrapper {
+        width: 70%; } }
+    @media only screen and (max-width: 900px) {
+      .wrapper .sweet-wrapper {
+        width: 60%; } }
+    @media only screen and (max-width: 650px) {
+      .wrapper .sweet-wrapper {
+        width: 100%; } }
+    .wrapper .sweet-wrapper .sweet {
+      display: inline-block;
+      width: 49%;
+      padding-bottom: 15px; }
+      @media only screen and (max-width: 1370px) {
+        .wrapper .sweet-wrapper .sweet {
+          width: 35%; } }
+      @media only screen and (max-width: 1100px) {
+        .wrapper .sweet-wrapper .sweet {
+          width: 100%; } }
+      @media only screen and (max-width: 650px) {
+        .wrapper .sweet-wrapper .sweet {
+          width: 100%; } }
+      .wrapper .sweet-wrapper .sweet .stock {
+        display: inline-block;
+        height: 140px; }
+      .wrapper .sweet-wrapper .sweet .content {
+        display: inline-block;
+        vertical-align: middle; }
+        .wrapper .sweet-wrapper .sweet .content .quantity {
+          width: 40px; }
+  .wrapper .total-wrapper {
+    display: inline-block;
+    padding: 5%;
+    float: right;
+    width: 40%;
+    text-align: center; }
+    @media only screen and (max-width: 1650px) {
+      .wrapper .total-wrapper {
+        width: 30%; } }
+    @media only screen and (max-width: 900px) {
+      .wrapper .total-wrapper {
+        width: 40%; } }
+    @media only screen and (max-width: 650px) {
+      .wrapper .total-wrapper {
+        width: 100%; } }
+
+.wrapper .login {
+  padding: 2% 25%; }
+  @media only screen and (max-width: 960px) {
+    .wrapper .login input {
+      width: 100%; } }
+  @media only screen and (max-width: 960px) {
+    .wrapper .login .btn {
+      display: block; } }
+
+.wrapper .input-form {
+  padding: 2% 30%; }
+  @media only screen and (max-width: 767px) {
+    .wrapper .input-form {
+      padding: 2% 20%; } }
+
+.wrapper .roles {
+  padding: 2% 30%; }
+  @media only screen and (max-width: 960px) {
+    .wrapper .roles {
+      padding: 2% 20%; } }
+  @media only screen and (max-width: 767px) {
+    .wrapper .roles {
+      padding: 2% 5%; } }
+  .wrapper .roles .user-table {
+    width: 100%; }
+    .wrapper .roles .user-table th, .wrapper .roles .user-table td {
+      border: 1px solid black; }
+
+/*# sourceMappingURL=style.css.map */

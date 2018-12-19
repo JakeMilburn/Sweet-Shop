@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+  <div class="content-wrapper">
+    <div>Your total cost is £{{ price }} + £{{ shipping }} = £{{ total }}</div><br>
+    <div>The total weight of your order is {{ weight }}g</div><br>
+
+    <div>
+      <p>Is this order a gift for a friend or family member?</p>
+      <form action="">
+        <input type="radio" name="gift" value="yes">Yes<br>
+        <input type="radio" name="gift" value="no" checked>No<br>
+      </form>
+    </div>
+
+    <input type="submit" name="submit" value="Proceed" class="btn btn-primary mt-3">
+  </div>
+{% endblock %}

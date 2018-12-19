@@ -1,0 +1,16 @@
+
+.wrapper {
+  .login {
+    padding: 2% 25%;
+    input {
+      @media only screen and (max-width: 960px) {
+        width: 100%;
+      }
+    }
+    .btn{
+      @media only screen and (max-width: 960px) {
+        display: block;
+      }
+    }
+  }
+}

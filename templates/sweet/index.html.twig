@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Sweets{%  endblock %}
+
+{% block body %}
+  {% if sweets %}
+	<form action="{{ path('checkout') }}" method="post" class="basket">
+    <div class="sweet-wrapper" id="sweets">
+      {% for sweet in sweets %}
+        <div class="sweet">
+          <img class="stock" src="../public/css/img/stock.png">
+          <div class="content">
+            <h4>{{ sweet.name }}</h4>
+            <div id="price">Price per gram <span>{{ sweet.price }}</span></div>
+            <div>Weight per sweet (g):<span id="weight">{{ sweet.weight }}</span></div>
+            <label for="{{ sweet.id }}">Quantity</label>
+            <input class="quantity" type="number" value="0" name="{{ sweet.id }}"/><br>
+            {% if is_granted('ROLE_ADMIN') %}
+            <a href="/media/public/sweet/edit/{{ sweet.id }}" class="btn btn-dark">Edit</a>
+            <a href="#" class="btn btn-danger delete-sweet" data-id="{{ sweet.id }}">Delete</a>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="total-wrapper">
+      <p>
+        The minimum weight for order is : 40grams<br>
+        Postage and package charges are as below<br>
+        40g - 250g = £1.50<br>
+        251g - 500g = £2.00<br>
+        >501g = £2.50<br>
+      </p>
+      <div class="total-weight">Total weight = 0</div>
+      <div class="total-sweets">Total No. sweets = 0</div>
+      <div class="total-cost">Total cost = £0.00</div>
+      {#<input type="submit" name="submit" value="Checkout" disabled>#}
+      <input type="submit" name="submit" value="Checkout">
+    </div>
+  </form>
+
+  {% else %}
+    <p>No sweets in stock</p>
+  {% endif %}
+{% endblock %}
+{% block javascripts %}
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  {#<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>#}
+  <script src="/media/public/js/main.js"></script>
+{% endblock %}

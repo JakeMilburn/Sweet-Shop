@@ -1,0 +1,17 @@
+.btn{
+  padding-top: 0.155rem;
+  padding-bottom: 0.155rem;
+}
+
+.content-wrapper {
+  padding: 2% 30%;
+  @media only screen and (max-width: 850px) {
+    padding: 2% 12%;
+  }
+  div {
+    font-size: 20px;
+    @media only screen and (max-width: 850px) {
+      font-size: 15px;
+    }
+  }
+}
