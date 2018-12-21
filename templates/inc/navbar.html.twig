@@ -11,10 +11,10 @@
         </li>
         {% if is_granted('ROLE_ADMIN') %}
           <li class="nav-item">
-          <a href="/media/public/sweet/new" class="nav-link">New Sweet</a>
+          <a href="{{ path('new_sweet') }}" class="nav-link">New Sweet</a>
           </li>
           <li class="nav-item">
-          <a href="/media/public/manage" class="nav-link">Manage Users</a>
+          <a href="{{ path('manage') }}" class="nav-link">Manage Users</a>
           </li>
           <li class="nav-item">
             <a href="{{ path('logout') }}" class="nav-link">Logout</a>

@@ -8,13 +8,13 @@
     <div class="sweet-wrapper" id="sweets">
       {% for sweet in sweets %}
         <div class="sweet">
-          <img class="stock" src="../public/css/img/stock.png">
+          <img class="stock" src="../public/css/img/stock.png" alt="placeholder image">
           <div class="content">
             <h4>{{ sweet.name }}</h4>
-            <div id="price">Price per gram <span>{{ sweet.price }}</span></div>
-            <div>Weight per sweet (g):<span id="weight">{{ sweet.weight }}</span></div>
+            <div class="price" id="price-{{ sweet.id }}">Price per gram <span>{{ sweet.price }}</span></div>
+            <div class="weight" id="weight-{{ sweet.id }}">Weight per sweet (g):<span>{{ sweet.weight }}</span></div>
             <label for="{{ sweet.id }}">Quantity</label>
-            <input class="quantity" type="number" value="0" name="{{ sweet.id }}"/><br>
+            <input class="quantity" type="number" value="0" min="0" name="{{ sweet.id }}" id="{{ sweet.id }}"/><br>
             {% if is_granted('ROLE_ADMIN') %}
             <a href="/media/public/sweet/edit/{{ sweet.id }}" class="btn btn-dark">Edit</a>
             <a href="#" class="btn btn-danger delete-sweet" data-id="{{ sweet.id }}">Delete</a>
@@ -34,8 +34,7 @@
       <div class="total-weight">Total weight = 0</div>
       <div class="total-sweets">Total No. sweets = 0</div>
       <div class="total-cost">Total cost = £0.00</div>
-      {#<input type="submit" name="submit" value="Checkout" disabled>#}
-      <input type="submit" name="submit" value="Checkout">
+      <input type="submit" name="submit" value="Checkout" id="checkout" disabled>
     </div>
   </form>
 
@@ -44,7 +43,6 @@
   {% endif %}
 {% endblock %}
 {% block javascripts %}
-  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-  {#<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>#}
+  <script src="js/jquery-3.3.1.min.js"></script>
   <script src="/media/public/js/main.js"></script>
 {% endblock %}

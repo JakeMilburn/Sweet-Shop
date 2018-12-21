@@ -17,9 +17,9 @@
       <td>{{ user.email }}</td>
 
       {% if user.roles.1 is defined %}
-        <td><input type="checkbox" id="admin" name="{{ user.id }}" value="admin" checked></td>
+        <td><input type="checkbox" id="admin-{{ user.id }}" name="{{ user.id }}" value="admin" checked></td>
       {% else %}
-        <td><input type="checkbox" id="admin" name="{{ user.id }}" value="admin"></td>
+        <td><input type="checkbox" id="admin-{{ user.id }}" name="{{ user.id }}" value="admin"></td>
       {% endif %}
     </tr>
   {% endfor %}
